@@ -1,0 +1,21 @@
+import { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
+
+function MyComponent() {
+  const { currentTheme, switchTheme } = useContext(ThemeContext);
+
+  return (
+    <div>
+      <button onClick={switchTheme}>Switch Theme</button>
+      <div
+        style={{
+          backgroundColor: currentTheme.primaryColor,
+          color: currentTheme.secondaryColor,
+        }}
+      >
+        <h1 className="text-3xl font-bold underline">Hello world!</h1>{" "}
+      </div>
+    </div>
+  );
+}
+export default MyComponent;
