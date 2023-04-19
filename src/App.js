@@ -4,7 +4,6 @@ import MyComponent from "./MyComponent";
 import { themes } from "./themes";
 
 function App() {
-console.log("LO LO Deno Ti Cimo Dennokki");
   const [currentTheme, setCurrentTheme] = useState(themes.light);
   const switchTheme = () => {
     setCurrentTheme(currentTheme === themes.light ? themes.dark : themes.light);
